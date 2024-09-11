@@ -1,0 +1,24 @@
+/* HeroBanner.module.css */
+.hero_banner {
+    background: linear-gradient(#171717, #332261);
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_h1_level {
+    background: linear-gradient(#fff, #a693eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.p_link {
+    text-decoration: none;
+    color: #693ee0;
+}
