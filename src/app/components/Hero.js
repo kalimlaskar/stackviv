@@ -7,7 +7,6 @@ import SearchBar from './SearchBar'
 
 import styles from './css/HeroBanner.module.css'
 import Link from 'next/link'
-import SearchBar from './SearchBar'
 
 const navigation = [
     { name: 'Product', href: '#' },
