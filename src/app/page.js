@@ -1,5 +1,5 @@
 import Featured from './components/Featured';
-import AiTools from './components/AiTools';
+import AiTools from './components/AITools';
 import Header from './components/Header';
 import Hero from './components/Hero';
 
