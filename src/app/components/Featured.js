@@ -68,13 +68,13 @@ export default function Featured() {
     return (
         <div className={`${styles.featured_bg} p-12`}>
             <div className="mx-auto max-w-7xl">
-                <div className='flex justify-between'>
+                <div className='flex justify-between pb-3'>
                     <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                         Featured
                     </h2>
                     <div className="font-medium leading-7 text-gray-900 sm:truncate sm:text-1xl sm:tracking-tight flex">View All <ArrowRightIcon aria-hidden="true" className="ml-2 h-6 w-6 sm:text-1xl" /></div>
                 </div>
-                <div className="mx-auto grid max-w-2xl grid-cols-1  border-t border-gray-200 sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                <div className="mx-auto grid max-w-2xl grid-cols-1  border-t-2 border-[#212529] sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                     {posts.map((post) => (
                         <article key={post.id} className="shadow-custom bg-white rounded-2xl p-4 m-2 flex max-w-xl flex-col items-start justify-between">
                             <div className="relative flex items-center gap-x-4">
