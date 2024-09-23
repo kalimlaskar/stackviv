@@ -4,7 +4,7 @@ import { Bars3Icon, BellIcon, HeartIcon, XMarkIcon } from '@heroicons/react/24/o
 export default function Footer() {
     return (
         <div className="bg-[#1e1e1e] p-8">
-            <div class="flex gap-32">
+            <div class="flex gap-32 mx-auto max-w-7xl">
                 <div class="flex-none w-72">
                     Stackviv is a free Generative AI Tools Directory, our aim is to provide access to the best AI websites, their features, and alternatives. We share our expertise with the best tutorials and resources.
                 </div>
