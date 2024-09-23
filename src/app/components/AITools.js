@@ -176,13 +176,13 @@ const StarIcon = () => (
 );
 
 export default function AiTools() {
-    const [visiblePosts, setVisiblePosts] = useState(3); // Number of posts to show initially
+    const [visiblePosts, setVisiblePosts] = useState(6); // Number of posts to show initially
     const [loading, setLoading] = useState(false); // Track loading state
 
     const handleLoadMore = () => {
         setLoading(true); // Start loading animation
         setTimeout(() => {
-            setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 3); // Show 3 more posts
+            setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 6); // Show 3 more posts
             setLoading(false); // Stop loading animation
         }, 1000); // 3-second delay
     };
@@ -190,7 +190,7 @@ export default function AiTools() {
     return (
         <div className="bg-white p-12">
             <div className="mx-auto max-w-7xl">
-                <div className='flex justify-between'>
+                <div className='flex justify-between mb-5 md:mb-0'>
                     <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                         New AI Tools
                     </h2>
@@ -199,7 +199,7 @@ export default function AiTools() {
                     </div>
                 </div>
 
-                <div className="mx-auto grid max-w-2xl grid-cols-1 mt-2 border-t-2 border-[#212529] sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 justify-items-center">
+                <div className="mx-auto grid max-w-2xl grid-cols-1 mt-2 pt-5 md:pt-8 border-t-2 border-[#212529] sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 justify-items-center">
                     {posts.slice(0, visiblePosts).map((post) => (
                         <article key={post.id} className="shadow-custom bg-white rounded-2xl p-4 m-2 flex max-w-xl flex-col items-start justify-between">
                             <div className="relative flex items-center gap-x-4">

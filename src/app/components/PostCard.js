@@ -30,7 +30,7 @@ const posts = [
 
 export default function PostCard() {
     return (
-        <div className='flex gap-6 border-t-2 border-[#212529]'>
+        <div className='flex gap-6 border-t-2 border-[#212529] md:flex-nowrap flex-wrap'>
             {posts.map((post) => (
                 <div key={post.id} className="p-6 bg-white  rounded-lg mt-8 max-w-[28rem] shadow-[0px_4px_6px_-2px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.1)]">
                     <a href="#">
@@ -43,7 +43,7 @@ export default function PostCard() {
                         </div>
                         <div className="redMoreCta flex text-[#212529]">
                             Read More
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" className="ml-2 h-6 w-6 sm:text-1xl"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" className="ml-2 h-6 w-6 sm:text-1xl"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path></svg>
                         </div>
                     </div>
                 </div>
