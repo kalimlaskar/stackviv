@@ -38,12 +38,12 @@ export default function PostCard() {
                     </a>
                     <p className="mb-3 mt-6 font-normal text-[#212529] line-clamp-7">{post.description}</p>
                     <div className='publishPost flex  justify-between mt-8'>
-                        <div class="publishDate text-[#212529]">
+                        <div className="publishDate text-[#212529]">
                             August 18, 2024
                         </div>
-                        <div class="redMoreCta flex text-[#212529]">
+                        <div className="redMoreCta flex text-[#212529]">
                             Read More
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="ml-2 h-6 w-6 sm:text-1xl"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" className="ml-2 h-6 w-6 sm:text-1xl"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path></svg>
                         </div>
                     </div>
                 </div>
