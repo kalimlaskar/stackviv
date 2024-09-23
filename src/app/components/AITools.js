@@ -1,4 +1,7 @@
-import styles from './css/Featured.module.css'
+"use client";  // Add this directive
+
+import { useState } from 'react';
+
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 const posts = [
@@ -173,6 +176,17 @@ const StarIcon = () => (
 );
 
 export default function AiTools() {
+    const [visiblePosts, setVisiblePosts] = useState(3); // Number of posts to show initially
+    const [loading, setLoading] = useState(false); // Track loading state
+
+    const handleLoadMore = () => {
+        setLoading(true); // Start loading animation
+        setTimeout(() => {
+            setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 3); // Show 3 more posts
+            setLoading(false); // Stop loading animation
+        }, 1000); // 3-second delay
+    };
+
     return (
         <div className="bg-white p-12">
             <div className="mx-auto max-w-7xl">
@@ -180,17 +194,20 @@ export default function AiTools() {
                     <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                         New AI Tools
                     </h2>
-                    <div className="font-medium leading-7 text-gray-900 sm:truncate sm:text-1xl sm:tracking-tight flex">View All <ArrowRightIcon aria-hidden="true" className="ml-2 h-6 w-5 sm:text-1xl" /></div>
+                    <div className="font-medium leading-7 text-gray-900 sm:truncate sm:text-1xl sm:tracking-tight flex">
+                        View All <ArrowRightIcon aria-hidden="true" className="ml-2 h-6 w-5 sm:text-1xl" />
+                    </div>
                 </div>
-                <div className="mx-auto grid max-w-2xl grid-cols-1 mt-2  border-t-2 border-[#212529] sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                    {posts.map((post) => (
+
+                <div className="mx-auto grid max-w-2xl grid-cols-1 mt-2 border-t-2 border-[#212529] sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 justify-items-center">
+                    {posts.slice(0, visiblePosts).map((post) => (
                         <article key={post.id} className="shadow-custom bg-white rounded-2xl p-4 m-2 flex max-w-xl flex-col items-start justify-between">
                             <div className="relative flex items-center gap-x-4">
                                 <img alt="" src={post.author.imageUrl} className="h-10 w-10 rounded-full bg-gray-50" />
                                 <div className="text-sm leading-6">
                                     <p className="font-semibold text-gray-900">
                                         <a href={post.author.href}>
-                                            <span className=" inset-0" />
+                                            <span className="inset-0" />
                                             {post.author.name}
                                         </a>
                                     </p>
@@ -199,7 +216,6 @@ export default function AiTools() {
                                             <StarIcon key={index} />
                                         ))}
                                     </div>
-
                                 </div>
                             </div>
                             <div className="flex items-center gap-x-4 text-xs">
@@ -224,6 +240,14 @@ export default function AiTools() {
                         </article>
                     ))}
                 </div>
+
+                {visiblePosts < posts.length && (
+                    <div className='flex justify-center'>
+                        <button onClick={handleLoadMore} className="px-4 py-2 mt-8 bg-[#693ee0] text-white rounded flex justify-center items-center">
+                            {loading ? 'Loading...' : 'Load More'}
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     )
