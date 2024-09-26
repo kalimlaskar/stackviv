@@ -1,4 +1,4 @@
-import Featured from './components/Featured';
+import FeaturedCard from './components/FeaturedCard';
 import AiTools from './components/AITools';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Header />
       <Hero />
-      <Featured />
+      <FeaturedCard />
       <AiTools />
       <AiBanner />
       <Post />

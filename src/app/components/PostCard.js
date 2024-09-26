@@ -18,12 +18,14 @@ export default function PostCard() {
                 return txt.value;
             };
 
+
+
             const formattedPosts = data.map(item => ({
                 id: item.id,
                 title: item.title.rendered,
-                href: item.link, // Replace with actual URL if available
+                href: item.slug, // Replace with actual URL if available
                 description: decodeHtmlEntities(item.excerpt.rendered.replace(/(<([^>]+)>)/gi, '')), // Strip HTML tags and decode entities
-                date: new Date(item.date).toLocaleDateString(), // Format date
+                date: new Date(item.date).toLocaleDateString()
             }));
 
 
@@ -42,7 +44,7 @@ export default function PostCard() {
             {posts.slice(0, 3).map((post) => (
                 <div key={post.id} className="p-6 flex-1 flex flex-wrap content-between bg-white rounded-lg mt-8  shadow-[0px_4px_6px_-2px_rgba(0,0,0,0.05),_0px_10px_15px_-3px_rgba(0,0,0,0.1)]">
                     <div className=''>
-                        <a href={post.href}>
+                        <a href={`blog/${post.href}`}>
                             <h5 className="mb-2 text-2xl text-[#000] font-semibold tracking-tight capitalize">{post.title}</h5>
                         </a>
                         <p className="mb-3 mt-6 font-normal text-[#212529] line-clamp-7">{post.description}</p>
@@ -51,7 +53,7 @@ export default function PostCard() {
                         <div className="publishDate text-[#212529]">
                             {post.date}
                         </div>
-                        <a href={post.href}>
+                        <a href={`blog/${post.href}`}>
                             <div className="redMoreCta flex text-[#212529]">
                                 Read More
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" className="ml-2 h-6 w-6 sm:text-1xl">
