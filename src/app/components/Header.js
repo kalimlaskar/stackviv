@@ -1,10 +1,12 @@
+
+import Link from 'next/link';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, HeartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from './icons/logo'
 
 
 const navigation = [
-    { name: 'Favourite AI Tools', href: '#', current: true },
+    { name: 'Favourite AI Tools', href: '/featured', current: true },
     { name: 'Submit AI', href: '#', current: false },
     { name: 'AI Categories', href: '#', current: false },]
 
@@ -28,7 +30,7 @@ export default function Header() {
                     </div>
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex flex-shrink-0 items-center">
-                            <Logo height={2} />
+                            <Link href="/"><Logo height={2} /></Link>
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">

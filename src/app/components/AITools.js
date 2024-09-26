@@ -1,4 +1,4 @@
-"use client";  // Add this directive
+"use client";
 
 import { useState } from 'react';
 
