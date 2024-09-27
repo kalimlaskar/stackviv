@@ -1,25 +1,17 @@
-// app/blog/[slug]/page.js
-"use client"
-import React from 'react';
-import { useParams } from 'next/navigation';  // New way to get params in App Router
-import Header from '../../components/Header';
-import Footer from '@/app/components/Footer';
+// app/blog/[slug]/page.js (Server Component)
 
-// Fetch the post data from API
-async function getPostData(slug) {
+import PostCard from '../../components/PostCard';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+async function getPostBySlug(slug) {
     const res = await fetch(`https://stackviv.ai/wp-json/wp/v2/posts?slug=${slug}`);
     const posts = await res.json();
-
-    // Return the first post matching the slug (WordPress API returns an array)
     return posts.length > 0 ? posts[0] : null;
 }
 
-// Dynamic page component
-export default async function PostPage() {
-    const params = useParams();  // This will grab the 'slug' from the URL
-    const post = await getPostData(params.slug);
+export default async function SinglePostPage({ params }) {
+    const post = await getPostBySlug(params.slug);
 
-    // Handle case where post is not found
     if (!post) {
         return <div>Post not found</div>;
     }
