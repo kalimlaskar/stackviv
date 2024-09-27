@@ -1,5 +1,5 @@
 import React from "react";
-import "@/app/globals.css";
+// import "@/app/globals.css";
 import styles from "@/app/components/css/Featured.module.css";
 import Header from "../components/Header";
 import Card from "../components/Card";
@@ -17,7 +17,7 @@ export default function AiCategories() {
                 </div>
                 <h2 className="text-xl text-white-900 m-4 ml-0">Discover the Perfect AI Tool in 417 Categories.
                 </h2>
-                <h2 className="text-xl text-white-900">From Automation to Text Generator, We've Got You Covered!</h2>
+                <h2 className="text-xl text-white-900">From Automation to Text Generator, We&apos;ve Got You Covered!</h2>
             </div>
             <div className={`${styles.featured_bg} p-12`}>
                 <div className="mx-auto max-w-7xl">
