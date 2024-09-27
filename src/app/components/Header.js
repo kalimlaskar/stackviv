@@ -6,9 +6,9 @@ import Logo from './icons/logo'
 
 
 const navigation = [
-    { name: 'Favourite AI Tools', href: '/featured', current: true },
+    { name: 'Favourite AI Tools', href: '/favourite-ai-tools', current: true },
     { name: 'Submit AI', href: '#', current: false },
-    { name: 'AI Categories', href: '#', current: false },]
+    { name: 'AI Categories', href: '/ai-categories', current: false },]
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -35,7 +35,7 @@ export default function Header() {
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
                                 {navigation.map((item) => (
-                                    <a
+                                    <Link
                                         key={item.name}
                                         href={item.href}
                                         aria-current={item.current ? 'page' : undefined}
@@ -45,7 +45,7 @@ export default function Header() {
                                         )}
                                     >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

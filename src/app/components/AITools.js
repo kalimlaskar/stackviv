@@ -1,5 +1,5 @@
 "use client";
-
+import Link from 'next/link';
 import { useState } from 'react';
 
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
@@ -194,9 +194,11 @@ export default function AiTools() {
                     <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                         New AI Tools
                     </h2>
-                    <div className="font-medium leading-7 text-gray-900 sm:truncate sm:text-1xl sm:tracking-tight flex">
-                        View All <ArrowRightIcon aria-hidden="true" className="ml-2 h-6 w-5 sm:text-1xl" />
-                    </div>
+                    <Link href="popular-ai">
+                        <div className="font-medium leading-7 text-gray-900 sm:truncate sm:text-1xl sm:tracking-tight flex">
+                            View All <ArrowRightIcon aria-hidden="true" className="ml-2 h-6 w-5 sm:text-1xl" />
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="mx-auto grid max-w-2xl grid-cols-1 mt-2 pt-5 md:pt-8 border-t-2 border-[#212529] sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 justify-items-center">
