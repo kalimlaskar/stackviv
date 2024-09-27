@@ -29,7 +29,7 @@ export default async function PostPage() {
             <Header />
             <div className="container mx-auto p-6 ">
                 <h1 className="text-4xl font-semibold mb-4">{post.title.rendered}</h1>
-                <div className="text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
+                <div className="text-lg text-white-700" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
             </div>
             <Footer />
         </div>
