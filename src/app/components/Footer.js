@@ -1,14 +1,15 @@
 import react from "react";
 import Copywriter from './Copywriter';
 import { Bars3Icon, BellIcon, HeartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from "next/link";
 export default function Footer() {
     return (
         <div className="bg-[#1e1e1e] p-8">
             <div className="w-full flex gap-4 md:gap-32 mx-auto max-w-7xl md:flex-nowrap flex-wrap">
-                <div className="flex-none w-72">
+                <div className="flex-none w-72 text-white">
                     Stackviv is a free Generative AI Tools Directory, our aim is to provide access to the best AI websites, their features, and alternatives. We share our expertise with the best tutorials and resources.
                 </div>
-                <div className="flex-auto w-64">
+                <div className="flex-auto w-64 text-white">
                     <span className="text-[#693ee0] text-[20px] leading-[28px] mb-2 font-medium"> Useful Links</span>
                     <ul className="mt-3">
                         <li>
@@ -21,12 +22,12 @@ export default function Footer() {
                 </div>
                 <div className="flex-auto w-64">
                     <span className="text-[#693ee0] text-[20px] leading-[28px] mb-2 font-medium"> Policies</span>
-                    <ul className="mt-3">
+                    <ul className="mt-3 text-white">
                         <li>
-                            Terms of Use
+                        <Link href="/terms-of-use"> Terms of Use </Link>
                         </li>
                         <li className="mt-2">
-                            Privacy Policy
+                            <Link href="/privacy-policy"> Privacy Policy </Link>
                         </li>
                     </ul>
                 </div>
