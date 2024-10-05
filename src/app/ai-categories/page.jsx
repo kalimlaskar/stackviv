@@ -4,6 +4,7 @@ import styles from "@/app/components/css/Featured.module.css";
 import Header from "../components/Header";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
+import AIAudioTools from "../components/AIAudioTools/page";
 
 export default function AiCategories() {
     return (
@@ -19,6 +20,8 @@ export default function AiCategories() {
                 </h2>
                 <h2 className="text-xl text-white-900">From Automation to Text Generator, We&apos;ve Got You Covered!</h2>
             </div>
+
+            <AIAudioTools />
             <div className={`${styles.featured_bg} p-12`}>
                 <div className="mx-auto max-w-7xl">
                     <div className="flex justify-between pb-3">
