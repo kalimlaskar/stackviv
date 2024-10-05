@@ -16,7 +16,7 @@ const TermsOfUse = () => {
         <title>Terms of Use | StackViv AI</title>
         <meta name="description" content="Terms of Use for StackViv AI" />
       </Head>
-      <main className="max-w-4xl mx-auto p-8">
+      <main className="max-w-7xl mx-auto p-8">
         <h1 className="text-4xl font-bold mb-6">Terms of Use</h1>
         <p className="text-lg mb-4">Last Updated: August 12, 2024</p>
 
